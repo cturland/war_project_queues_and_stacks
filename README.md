@@ -7,7 +7,7 @@
 
 ---
 
-## 🃏 Game Rules (Simplified War)
+## 🃏 Game Rules
 1. Two players each start with half a shuffled deck in a queue.
 2. Each round:
    - Both players **dequeue** their top card.
@@ -34,7 +34,7 @@
 
 ---
 
-## 🕹️ Part B — Playing a Normal Round (Guide — no code)
+## 🕹️ Part B — Playing a Normal Round
 - Create a function **`play_round(p1, p2)`** with two parameters (both are `Queue` instances).
 - If either queue is empty at the start of a round, the other player has won (or the game ends if both are empty).
 - Dequeue **one** card from each player: call them **`c1`** (from `p1`) and **`c2`** (from `p2`). Keep these values to return if there is a tie.
@@ -65,7 +65,7 @@
 
 ---
 
-## 🔁 Part D — Main Game Loop (Guide — no code)
+## 🔁 Part D — Main Game Loop
 - Create **`play_game(max_rounds=… )`** that sets up the deck, shuffles, and deals into `p1` and `p2`.
 - Keep a **round counter**.
 - While **both** queues are **not empty** and you have **not exceeded** `max_rounds`:
@@ -79,7 +79,7 @@
 
 ---
 
-## 🧪 Part E — Testing (no code, concrete scenarios)
+## 🧪 Part E — Testing
 1. **Joker dominance:** Use a small deck that contains **Jokers vs low ranks** to confirm Jokers always win face-offs.
 2. **Forced war:** Construct a mini-deck that will **tie** on the first round and verify **3 down + 1 up** behaviour and collection order (**winner’s pile first, then opponent’s**).
 3. **Exhaustion during war:** Start one player with **fewer than 4 cards** and trigger a tie; confirm the opponent **wins immediately** and **collects** any accumulated war piles.
@@ -87,7 +87,7 @@
 
 ---
 
-## 🧩 Extensions (post‑MVP)
+## 🧩 Extensions
 - **War chains:** Track the **longest chain** of consecutive wars in a game.
 - **Telemetry:** Record round-by-round sizes of `p1` and `p2`; plot or review later.
 - **Collection variants:** Experiment with **collecting opponent’s pile first**; discuss how/why outcomes change.
